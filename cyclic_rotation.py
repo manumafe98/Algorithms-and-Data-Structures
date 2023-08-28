@@ -7,6 +7,7 @@
 
 def solution(A, K):
     while K != 0:
+        # Make a copy of A array
         temp = A[:]
         for idx, value in enumerate(A):
             if idx == len(temp) - 1:
