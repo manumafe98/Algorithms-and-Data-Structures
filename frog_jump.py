@@ -33,3 +33,10 @@ import math
 
 def solution(X, Y, D):
     return math.ceil((Y - X) / D)
+
+
+# Alternative solution with custom ceil instead of using the math one
+# def custom_ceil(number):
+#     if number == int(number):
+#         return int(number)
+#     return int(number) + 1
