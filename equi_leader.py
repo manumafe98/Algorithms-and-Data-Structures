@@ -44,6 +44,7 @@ each element of array A is an integer within the range [−1,000,000,000..1,000,
 """
 
 def solution(A):
+    # Calculating the dominator
     B = A[:]
     B.sort()
 
@@ -61,14 +62,17 @@ def solution(A):
             leader = val
             break
     
+    # Getting the total of appearances of the leader
     for idx, val in enumerate(A):
         if val == leader:
             total_appearances += 1
 
-
+    # Getting the equi_leaders of the array
     equi_leader = 0
     new_count = 0
 
+    # with the new count and (total_appearances - new_count) 
+    # we always know how many leaders are in both sides of the array
     for idx, val in enumerate(A):
         if val == leader:
             new_count += 1
