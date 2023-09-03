@@ -49,10 +49,14 @@ def solution(A):
     # Temp min is an absurd number just to match this condition "N is an integer within the range [0..400,000]"
     temp_min = 1500000
     
+    # We iterate over the values of the array
     for val in A:
+        # if val is smaller than temp_min we replace it
         if val < temp_min:
             temp_min = val
         else:
+            # Else if the rest of val and the temporary minimal is greater than current diff
+            # we define a new diff
             if val - temp_min > diff:
                 diff = val - temp_min
     return diff
