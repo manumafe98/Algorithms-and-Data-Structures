@@ -1,6 +1,7 @@
 # Codility
 """
-A non-empty array A consisting of N integers is given. The unique number is the number that occurs exactly once in array A.
+A non-empty array A consisting of N integers is given. 
+The unique number is the number that occurs exactly once in array A.
 
 For example, the following array A:
 
