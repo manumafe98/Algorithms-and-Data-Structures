@@ -27,6 +27,7 @@ Constraints:
 All the integers in nums are unique.
 nums is sorted in ascending order.
 """
+from typing import List
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
