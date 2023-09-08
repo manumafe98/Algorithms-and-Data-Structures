@@ -70,6 +70,7 @@ def solution(A):
     # calculate the difference between the current number and the next one
     # if its more than 1 return that value
     for i in range(0, len(A) - 1):
+        # A[i] > 0 its to avoid duplicates
         if A[i] > 0 and (A[i + 1] - A[i]) > 1:
             return A[i] + 1
     # if no missing numbers in the sequence then return the last one + 1
