@@ -25,6 +25,7 @@ Constraints:
 
 1 <= n <= 231 - 1
 """
+# O(Log(n))
 class Solution:
     def arrangeCoins(self, n: int) -> int:
         # Define our pointers
@@ -48,3 +49,16 @@ class Solution:
                 # And update the current res
                 res = max(mid, res)
         return res
+    
+# O(N)
+class Solution:
+    def arrangeCoins(self, n: int) -> int:
+        count = 0
+        num = 1
+
+        while n >= 0:
+            n = n - num
+            num += 1
+            count += 1
+        
+        return count - 1
