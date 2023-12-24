@@ -7,7 +7,8 @@ import java.util.HashMap;
 public class Solution {
     // My first solution
     public boolean isAnagram(String s, String t) {
-        if (s.length() > t.length() || t.length() > s.length()) return false;
+        if (s.length() > t.length() || t.length() > s.length())
+            return false;
 
         Map<Character, Integer> tMap = new HashMap<>();
         Map<Character, Integer> sMap = new HashMap<>();
@@ -24,7 +25,7 @@ public class Solution {
             if (sMap.containsKey(schar)) {
                 sMap.put(schar, sMap.get(schar) + 1);
             } else {
-                sMap.put(schar, 1); 
+                sMap.put(schar, 1);
             }
         }
 
@@ -35,10 +36,10 @@ public class Solution {
     public boolean isAnagram1(String s, String t) {
         char[] sChars = s.toCharArray();
         char[] tChars = t.toCharArray();
-        
+
         Arrays.sort(sChars);
         Arrays.sort(tChars);
-        
+
         return Arrays.equals(sChars, tChars);
     }
 }

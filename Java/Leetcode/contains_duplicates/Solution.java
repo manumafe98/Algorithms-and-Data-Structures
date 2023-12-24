@@ -3,7 +3,6 @@ package Leetcode.contains_duplicates;
 import java.util.Map;
 import java.util.HashMap;
 
-
 public class Solution {
     public boolean containsDuplicate(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
