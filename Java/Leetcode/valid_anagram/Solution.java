@@ -1,9 +1,11 @@
 package Leetcode.valid_anagram;
 
 import java.util.Map;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Solution {
+    // My first solution
     public boolean isAnagram(String s, String t) {
         if (s.length() > t.length() || t.length() > s.length()) return false;
 
@@ -27,5 +29,16 @@ public class Solution {
         }
 
         return tMap.equals(sMap);
+    }
+
+    // This solution improves runtime
+    public boolean isAnagram1(String s, String t) {
+        char[] sChars = s.toCharArray();
+        char[] tChars = t.toCharArray();
+        
+        Arrays.sort(sChars);
+        Arrays.sort(tChars);
+        
+        return Arrays.equals(sChars, tChars);
     }
 }
